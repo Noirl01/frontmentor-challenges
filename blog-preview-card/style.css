@@ -1,0 +1,168 @@
+:root {
+  --primary-background-color: hsl(47, 88%, 63%);
+  --primary-font-color: hsl(0, 0%, 50%);
+  --primary-heading-color: hsl(0, 0%, 7%);
+  --secondary-background-color: hsl(0, 0%, 100%);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-background-color);
+  line-height: 1;
+  height: 100vh;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+main {
+  height: 100vh;
+}
+h2 {
+  font-weight: 800;
+}
+p,
+span {
+  font-weight: 600;
+}
+.card {
+  background-color: var(--secondary-background-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 385px;
+  padding: 20px;
+  border: 1px solid var(--primary-heading-color);
+  border-radius: 20px;
+  box-shadow: 7px 10px;
+  transition: 0.2s linear;
+}
+.card:hover {
+  box-shadow: 12px 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-image > img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.tag {
+  margin-top: -3%;
+  background-color: var(--primary-background-color);
+  width: fit-content;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 14px;
+  margin-top: 7%;
+  text-align: center;
+}
+.publish-date {
+  margin-top: 1%;
+  font-size: 14px;
+}
+.container > h2 {
+  margin-top: 1%;
+}
+.card:hover > .container > h2 {
+  color: var(--primary-background-color);
+  cursor: pointer;
+}
+.user-info {
+  margin-top: 2%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.user-info > img {
+  width: 35px;
+  padding-bottom: 5px;
+}
+
+.user-info > span {
+  font-weight: 800;
+  font-size: 14px;
+}
+.description {
+  line-height: 1.5;
+  margin-top: 1%;
+  color: var(--primary-font-color);
+}
+
+.attribution {
+  position: absolute;
+  width: fit-content;
+  text-align: center;
+  width: 500px;
+  bottom: 10px;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.attribution a {
+  color: red;
+  text-decoration: none;
+}
+.attribution:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 20px;
+  bottom: 1px;
+  border-bottom: black 2px solid;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: auto;
+    width: 95%;
+  }
+
+  .attribution {
+    font-size: 12px;
+    max-width: 250px;
+  }
+  .attribution:before {
+    border-bottom: none;
+  }
+}
