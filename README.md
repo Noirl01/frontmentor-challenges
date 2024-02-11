@@ -4,6 +4,6 @@ A Personal Repository for Frontend Mentor challenges
 
 ## Finished Challenges
 
-✅ Recipe Time
+- [x] Recipe Time - [Visit](https://noirl01.github.io/frontmentor-challenges/recipe-time/)
 
-✅ Blog Preview Card
+- [x] Blog Preview Card - [Visit](https://noirl01.github.io/frontmentor-challenges/blog-preview-card/)
